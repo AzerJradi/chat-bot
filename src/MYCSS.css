@@ -1,0 +1,36 @@
+*{
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+}
+h1{
+    margin-left: 42.5% ;
+    font-size: 52px;
+    background: transparent;
+}
+.chat-container{
+    background: transparent;
+}
+#yes{
+    background: transparent;
+}
+button{
+    background: white;
+}
+input{
+    background: white;
+    width: 15%;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 6px;
+    margin-left: 2.5%;
+    padding-left: 4%;
+    margin-right: -4%;
+}
+#yes{
+    background: white;
+    width: 15%;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 6px;
+    margin: 0 -4% 5px 2.5%;
+    padding-left: 4%;
+}
