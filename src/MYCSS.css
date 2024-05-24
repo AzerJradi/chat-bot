@@ -1,12 +1,9 @@
 *{
-    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    background: black ;
 }
 h1{
     margin-left: 42.5% ;
     font-size: 52px;
-    background: transparent;
-}
-.chat-container{
     background: transparent;
 }
 #yes{
@@ -15,15 +12,42 @@ h1{
 button{
     background: white;
 }
+.send-button{
+    margin-left: 90%;
+    top: 648px;
+    position: fixed;
+}
+#response{
+    /* background: #edb1f1; */
+    background-color:#C7C8CC;
+    color: black;
+    width: 15%;
+    border-radius: 8px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+.chat-container{
+    height: 320px;
+    margin-left: 5%;
+    font-size: 18px;
+    margin-top: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: 5px;
+}
 input{
     background: white;
-    width: 15%;
+    width: 85%;
     height: 30px;
     border: 2px black solid;
     border-radius: 6px;
-    margin-left: 2.5%;
+    margin-left: 5%;
     padding-left: 4%;
     margin-right: -4%;
+    top: 640px;
+    position: fixed;
 }
 #yes{
     background: white;
@@ -34,3 +58,414 @@ input{
     margin: 0 -4% 5px 2.5%;
     padding-left: 4%;
 }
+.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  :root{
+    --gray: #ececec;
+    --purple: #edb1f1
+}
+body{
+    background-color: aliceblue;
+}
+.all{
+    margin: 50px 35% 10px 35%  ; 
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 40px;
+}
+.phone{
+    border-radius: 40px;
+    background-color: var(--gray);
+    padding-bottom: 30px;
+}
+.userName{
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding-top: 10px;
+    height: 120px;
+}
+.white{
+    width: 220px;
+    height: 60px;
+    position: relative;
+    left: 95px;
+    bottom: 24px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.user{
+    position: relative;
+    left: 80px;
+    bottom: 120px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 1px;
+}
+.pdp{
+    width: 40px;
+    border:1px solid white;
+    border-radius: 50%;
+    position: relative;
+    left: 30px;
+    bottom: 160px;
+}
+.status{
+    position: relative;
+    left: 80px;
+    bottom: 200px;
+    font-size: 16px;
+    color: #606470;
+    letter-spacing: 1px;
+}
+.z{
+    color: white;
+    position: relative;
+    left: 350px;
+    top: 108px;
+    font-size: 35px;
+}
+.messages{
+
+}
+.mess1{
+    color: blueviolet;
+    background-color: var(--purple);
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 200px;
+    padding-left: 10px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+.mess2{
+    color: blueviolet;
+    background-color: var(--purple);
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 200px;
+    padding-left: 10px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+.mess3{
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    margin-right: 200px;
+    padding-left: 10px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    position: relative;
+    right: -185px;
+}
+.mess4{
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    margin-right: 200px;
+    padding-left: 10px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    position: relative;
+    right: -185px;
+}
+.mess5{
+    color: blueviolet;
+    background-color: var(--purple);
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 150px;
+    padding-left: 10px;
+    padding-top: 5px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+}
+.images{
+    position: relative;
+    left: 90px;
+
+}
+.photo1{
+    width: 100px;
+    border-radius: 20px;
+}
+.photo2{
+    width: 100px;
+    border-radius: 20px;
+}
+.photo3{
+    width: 100px;
+    border-radius: 20px;
+}
+.choice1{
+    border-radius: 12px;
+    border-bottom-left-radius: 4px;
+    margin:10px 100px 10px 10px;
+    height: 60px;
+    width: 320px;
+}
+.prd1{
+    color: white;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.prd2{
+    color: white;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+.price1{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 200px;
+    bottom: 55px;
+}
+.price2{
+    color: white;
+    font-size: 30px;
+    position: relative;
+    left: 200px;
+    bottom: 55px;
+}
+.typ{
+    background-color: white;
+    border-radius: 30px;
+    margin:0px 10%;
+    padding-bottom: 20px;
+}
+.typing{
+    color: #606470;
+    position: relative;
+    top: 18px;
+    left: 20px;
+    font-size: 18px;
+}
+.paragraphe{
+    position: relative;
+    left: 1100px;
+    bottom: 600px;
+}
+.titre{
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif,fantasy;
+}
+.description{
+    font-size: 20px;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+.profilee{
+    border: #606470 2px solid;
+    border-left: none;
+    border-right: none;
+    height: 125px;
+}
+.pdp{
+    border-radius: 50%;
+    border: 3px greenyellow solid;
+    background: white;
+    width: 70px;
+    margin-bottom: -240px;
+}
+.titleProfile{
+    margin-left: 8%;
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.green{
+    margin-top: -3px;
+    background: greenyellow;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 8%;
+    margin-top: 5px;
+    color: transparent;
+}
+.enligne{
+    margin-left: 10%;
+    margin-top: -35px;
+}
+.phone{
+    background: transparent;
+}
+.name{
+    background: transparent;
+    width: 100%;
+}
+.talkToUrFrined{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 2.5%;
+    text-decoration: none;
+}
+.navbar{
+    border-right: #262626 2px solid;
+    height: 675px;
+    width: 25%;
+    display: block;
+}
+.forYouPage {
+    height: 675px;
+    overflow-y: scroll; /* Ensure only vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+    width: 45%;
+    margin-left: 5%;
+    border-right: #262626 2px solid;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+/* Hide scrollbar for WebKit browsers */
+.forYouPage::-webkit-scrollbar {
+    display: none;
+}
+
+.photointa{
+    margin-left: 18%;
+    border-radius: 4px;
+    object-fit: contain;
+}
+.pdpProfile{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-left: 26%;
+    border: 2px greenyellow solid;
+    margin-top: 20px;
+    margin-bottom: -45px;
+}
+.nameOfProfile{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 35%;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+.commentsOfinsta{
+    margin-left: 26%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    width: 45%;
+    margin-top: -30px;
+}
+.like{
+    margin-left: 24%;
+    margin-top: -4px;
+    background: transparent;
+    margin-bottom: -20px;
+}
+#username{
+    margin-top: 20px;
+    margin-left: 26%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.allllll{
+    display: flex;
+    flex-direction: row;
+}
+.ADDURFRIENDS{
+    width: 35%;
+    padding-left: -5%;
+}
+.profileFollowing{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#pdpProfile{
+    margin-left: 25px;
+    margin-bottom: 5px;
+}
+#nameOfProfile{
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #fff;
+    border: 1px solid #0077b5;
+    padding: 5px;
+    position: relative;
+    width: 7.2em;
+    height: 2em;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 0.4em;
+  }
+  
+  button p {
+    position: absolute;
+    top: 0.4em;
+    left: 1.2em;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+    color: #0077b5;
+  }
+  
+  button svg {
+    position: absolute;
+    top: 0.45em;
+    right: 0.5em;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 1em;
+    fill: #fff
+  }
+  
+  button:hover p {
+    left: 0.6em;
+    color: #fff
+  }
+  
+  button:hover svg {
+    opacity: 1;
+  }
+  
+  button:hover {
+    background-color: #0077b5;
+  }
+  .flwbtn{
+    margin-left: 5%;
+    margin-top: 35px;
+  }
+  .btnFollow{
+    width: 75%;
+    padding-right: 85px;
+  }
+  .follow{
+    color: black;
+    background: transparent;
+  }
+  .ins{
+    background: transparent;
+  }
