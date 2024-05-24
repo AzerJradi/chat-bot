@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const collection = require("./config")
+const collection = require("./config");
 
 const app = express();
 app.use(express.json());
-app.use(express.urlencoded({extended:false}));
+app.use(express.urlencoded({ extended: false }));
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -22,39 +22,46 @@ app.get("/signup", (req, res) => {
     res.render("signup");
 });
 
-
-app.post("/signup", async (req,res)=>{
+app.post("/signup", async (req, res) => {
     const data = {
-        name: req.body.username ,
+        name: req.body.username,
         password: req.body.password
-    }
-    const exisitingUser = await collection.findOne({name: data.name})
-    if(exisitingUser){
-        res.send("user allready exists. Please enter another username")
-    }else{
-        const saltRounds= 10;
-        const hashedPassword = await bcrypt.hash(data.password, saltRounds)
-        data.password = hashedPassword;
-        const userdata = await collection.insertMany(data);
-    }
-})
-
-app.post("/login",(req,res)=>{
+    };
     try {
-        const check = await collection.findOne({name:req.body.username});
-        if(!check){
-            res.send("username can not be found")
+        const existingUser = await collection.findOne({ name: data.name });
+        if (existingUser) {
+            res.send("User already exists. Please enter another username.");
+        } else {
+            const saltRounds = 10;
+            const hashedPassword = await bcrypt.hash(data.password, saltRounds);
+            data.password = hashedPassword;
+            const userData = await collection.insertMany(data);
+            res.send("User signed up successfully.");
         }
-        const checkpassword = await bcrypt.compare({req.body.password , check.password});
-        if(checkpassword){
-            res.render("home");
-        }else{
-            req.send("wrong password")
-        }
-    } catch{
-        res.send("wrong details")
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error.");
     }
-})
+});
+
+app.post("/login", async (req, res) => {
+    try {
+        const check = await collection.findOne({ name: req.body.username });
+        if (!check) {
+            res.send("Username not found.");
+        } else {
+            const checkPassword = await bcrypt.compare(req.body.password, check.password);
+            if (checkPassword) {
+                res.render("home");
+            } else {
+                res.send("Wrong password.");
+            }
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal server error.");
+    }
+});
 
 const port = 5000;
 app.listen(port, () => {
